@@ -4,11 +4,11 @@ outer
 
 > Computes the [outer product](https://en.wikipedia.org/wiki/Outer_product).
 
-The outer product between two vectors `x` and `y` is denoted as x ⊗ y and is equivalent to the matrix multiplication `x y^t`. For a vector `x` of length `M` and `y` of length `N`, it is equal to
+The outer product between two vectors `x` and `y` is denoted as x ⊗ y and is equivalent to the matrix multiplication `x y^t`. For a vector `x` of length *M* and `y` of length *N*, it is equal to
 
 <div class="equation" align="center" data-raw-text="\mathbf{x} \otimes \mathbf{y} =  
 \begin{bmatrix}x_0y_0 &amp; x_0y_1 &amp; \dots &amp; x_0y_{N-1} \\ x_1y_0 &amp; x_1y_1 &amp; \dots &amp; x_1y_{N-1} \\ \ydots &amp; \ydots &amp; \ddots &amp; \ydots\\ x_{M-1}y_0 &amp; x_{M-1}y_1 &amp; \dots &amp; x_{M-1}y_{N-1} \end{bmatrix}." data-equation="eq:principal_square_root">
-	<img src="" alt="Equation for the outer product.">
+	<img src="https://cdn.rawgit.com/compute-io/outer/38cac9485c95388527e00262ecd83ba43d00c924/docs/img/eqn.svg" alt="Equation for the outer product.">
 	<br>
 </div>
 
@@ -29,7 +29,7 @@ var outer = require( 'compute-outer' );
 
 #### outer( x, y[, opts] )
 
-Computes the outer product between `x` and `y`. `x` and `y` have to either [`numbers`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number), [`arrays`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array) or [`typed arrays`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Typed_arrays). Passing a single number either as `x` or `y` will be treated as when passing a vector of length one. The function returns a [`matrix`](https://github.com/dstructs/matrix) with *m* rows and *n* columns, where *m* is the length of `x` and *n* the length of `y`.
+Computes the outer product between `x` and `y`. `x` and `y` have to either [`numbers`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number), [`arrays`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array) or [`typed arrays`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Typed_arrays). Passing a single number either as `x` or `y` will be treated as when passing a vector of length one. The function returns a [`matrix`](https://github.com/dstructs/matrix) with *M* rows and *N* columns, where *M* is the length of `x` and *N* the length of `y`.
 
 ``` javascript
 outer( [ 1, 2, 3], 2 )
